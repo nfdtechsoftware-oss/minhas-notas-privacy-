@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - My Notes / Minhas Notas</title>
+    <script>
+        // Detect browser language and redirect
+        (function() {
+            // Get browser language
+            const userLang = navigator.language || navigator.userLanguage;
+
+            // Check if Portuguese (any variant: pt, pt-BR, pt-PT, etc.)
+            const isPortuguese = userLang.toLowerCase().startsWith('pt');
+
+            // Redirect to appropriate version
+            if (isPortuguese) {
+                window.location.href = 'index_pt.html';
+            } else {
+                window.location.href = 'index_en.html';
+            }
+        })();
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            color: white;
+        }
+        .loading {
+            text-align: center;
+        }
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 3px solid white;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        a {
+            color: white;
+            text-decoration: underline;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="spinner"></div>
+        <p>Redirecting... / Redirecionando...</p>
+        <p style="margin-top: 20px; font-size: 14px;">
+            If not redirected automatically:<br>
+            <a href="index_pt.html">🇧🇷 Português</a>
+            <a href="index_en.html">🇺🇸 English</a>
+        </p>
+    </div>
+</body>
+</html>
